@@ -7,32 +7,13 @@
     <style>
         html {
             min-height:100%;
-            background:url(backCar.jpg);
+            background-color: white;
             background-size:cover;
             box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
         }
-        #trapezoid {
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
-            border: 40px solid rgba(0,0,0,0);
-            border-top: 0 solid;
-            border-bottom: 100px solid rgba(1, 1, 1, .4);
-            -webkit-border-radius: 20px 20px 0 0;
-            border-radius: 20px 20px 0 0;
-            font: normal 100%/normal Arial, Helvetica, sans-serif;
-            color: rgba(0,0,0,0.2);
-            -o-text-overflow: clip;
-            text-overflow: clip;
-            -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
-            margin-top:-53px;
-            width: 700px;
-            position: relative;
-            transition: all 0.7s ease;
-            padding-left:7%;
-        }
+
         .navbar {
+            font-family: "Baskerville Old Face", sans-serif;
             position: sticky;
             top: 0;
             display:flex;
@@ -57,6 +38,9 @@
             color: black;
             border-radius:5px;
         }
+        body{
+            font-family: "Baskerville Old Face", monospace;
+        }
 
     </style>
 
@@ -69,7 +53,7 @@
         <img style="width: 30%" src="logo.jpg" class="logo">
     </div>
     <nav class="navbar">
-        <div id="trapezoid">
+        <div>
             <a href="home.php">Home</a>
             <a href="services.php">Services</a>
             <a href="submissions.php">Submissions</a>
@@ -80,8 +64,8 @@
 </header>
 
 
-<div style="margin-left: 400px; margin-right: 700px; background-image: url(bugatiDiv.jpg); box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7)">
-<p style="font-size: 25px; color: white; margin-left: 10px">Car</p>
+<div style="margin-left: 400px; margin-right: 700px; background-image: url(car.jpg); box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7)">
+    <p style="font-size: 25px; color: white; margin-left: 10px">Car</p>
     <ul style="color: white">
         <li>Exterior Polishing</li>
         <li>Interior Cleaning</li>
@@ -92,30 +76,30 @@
 </div>
 
 <div style="margin-left: 400px; margin-right: 700px; background-color: #7abaff; background-image: url(boat.jpg); box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7)">
-<p style="font-size: 25px; color: white"">Boat</p>
-<ul style="color: white">
-    <li>Exterior Polishing</li>
-    <li>Interior Cleaning</li>
-    <li>Sealer</li>
-    <li>Window Treatment</li>
-    <li>Nano Ceramic</li>
-</ul>
+    <p style="font-size: 25px; color: white"">Boat</p>
+    <ul style="color: white">
+        <li>Exterior Polishing</li>
+        <li>Interior Cleaning</li>
+        <li>Sealer</li>
+        <li>Window Treatment</li>
+        <li>Nano Ceramic</li>
+    </ul>
 </div>
 
 <div style="float: right; margin-top: -326px; margin-right: 400px; margin-left: 700px; background-color: #7abaff; height: 142px; width: 250px; background-image: url(motorcycle.jpg); box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7)">
-<p style="font-size: 25px; color: white; margin-top: 0px">Motorcycle</p>
-<ul style="color: white">
-    <li>Polishing</li>
-    <li>Nano Ceramic</li>
-</ul>
+    <p style="font-size: 25px; color: white; margin-top: 0px">Motorcycle</p>
+    <ul style="color: white">
+        <li>Polishing</li>
+        <li>Nano Ceramic</li>
+    </ul>
 </div>
 
 <div style="float: right; margin-top: -160px; margin-right: 400px; margin-left: 700px; background-color: #7abaff; height: 142px; width: 250px; background-image: url(seadoo.jpg); box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7)">
-<p style="font-size: 25px; color: white; margin-top: 0px">Skidoo & Seadoo</p>
-<ul style="color: white">
-    <li>Polishing</li>
-    <li>Nano Ceramic</li>
-</ul>
+    <p style="font-size: 25px; color: white; margin-top: 0px">Skidoo & Seadoo</p>
+    <ul style="color: white">
+        <li>Polishing</li>
+        <li>Nano Ceramic</li>
+    </ul>
 </div>
 
 </body>

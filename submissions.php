@@ -6,6 +6,7 @@
     <title>Moz-Art</title>
 
     <style>
+
         label {
             color: #bbbbbb;
         }
@@ -49,28 +50,9 @@
             display: inline-block;
             font-size: 16px;
         }
-        #trapezoid {
-            -webkit-box-sizing: content-box;
-            -moz-box-sizing: content-box;
-            box-sizing: content-box;
-            border: 80px solid rgba(0,0,0,0);
-            border-top: 0 solid;
-            border-bottom: 100px solid rgba(1, 1, 1, .4);
-            -webkit-border-radius: 20px 20px 0 0;
-            border-radius: 20px 20px 0 0;
-            font: normal 100%/normal Arial, Helvetica, sans-serif;
-            color: rgba(0,0,0,0.2);
-            -o-text-overflow: clip;
-            text-overflow: clip;
-            -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
-            margin-top:-53px;
-            width: 700px;
-            position: relative;
-            transition: all 0.7s ease;
-            padding-left:7%;
-        }
+
         .navbar {
+            font-family: "Baskerville Old Face", serif;
             position: sticky;
             top: 0;
             display:flex;
@@ -95,6 +77,10 @@
             color: black;
             border-radius:5px;
         }
+        body{
+            font-family: "Baskerville Old Face", serif;
+        }
+
     </style>
 
 </head>
@@ -105,22 +91,22 @@
     <div style="text-align: center" class="row1">
         <img style="width: 30%" src="logo.jpg" class="logo">
     </div>
-<nav class="navbar">
-    <div id="trapezoid">
-    <a href="home.php">Home</a>
-    <a href="services.php">Services</a>
-    <a href="submissions.php">Submissions</a>
-    <a href="contact.php">Contact Us</a>
-    </div>
-</nav>
+    <nav class="navbar">
+        <div>
+            <a href="home.php">Home</a>
+            <a href="services.php">Services</a>
+            <a href="submissions.php">Submissions</a>
+            <a href="contact.php">Contact Us</a>
+        </div>
+    </nav>
 
 </header>
 <br>
 <div class="box">
     <p style="color: white; font-size: 30px; text-align: center">Ask for Submission</p><br>
-    <form method="post" action="registerSub.php" >
+    <form name="userInfo" method="post" action="onSubmit.php">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" name="name" autofocus="autofocus"><br><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"><br><br>
         <label for="phone">Phone Number:</label>
@@ -138,7 +124,4 @@
 </div>
 
 </body>
-
 </html>
-
-<?php
