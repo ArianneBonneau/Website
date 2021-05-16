@@ -83,7 +83,7 @@
 <div>
     <div>
         <img style="margin-left: 500px" src="fbIcon.png">
-        <p style="margin-right: 590px"><a class="contact" href="#">Moz-Art Polissage</a></p>
+        <p style="margin-right: 590px"><a class="contact" href="https://www.facebook.com/Moz-Art-polissage-102588678167635">Moz-Art Polissage</a></p>
     </div>
     <br>
     <div>
@@ -93,12 +93,12 @@
     <br>
     <div>
         <img style="margin-left: 500px" src="emailIcon.png">
-        <p style="margin-right: 515px"><a class="contact" href="#">mozartpolissage@gmail.com</a></p>
+        <p style="margin-right: 515px"><a class="contact" href="mailto:mozartpolissage@gmail.com">mozartpolissage@gmail.com</a></p>
     </div>
     <br>
     <div>
         <img style="margin-left: 500px" src="phoneIcon.png">
-        <p style="margin-right: 625px"><a class="contact" href="#">514-730-5983</a></p>
+        <p style="margin-right: 625px"><a class="contact" href="tel:+5147305983">514-730-5983</a></p>
     </div>
 
 </div>
