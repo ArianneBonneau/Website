@@ -65,7 +65,7 @@
 
 
 <div style="margin-left: 400px; margin-right: 700px; background-image: url(car.jpg); box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7)">
-    <p style="font-size: 25px; color: white; margin-left: 10px">Car</p>
+    <p style="font-size: 25px; color: white;">Car</p>
     <ul style="color: white">
         <li>Exterior Polishing</li>
         <li>Interior Cleaning</li>

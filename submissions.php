@@ -89,7 +89,7 @@
 <header style="background-color: black">
 
     <div style="text-align: center" class="row1">
-        <img style="width: 30%" src="logo.jpg" class="logo">
+        <img style="width: 30%" src="logo.jpg" class="logo" alt="logo">
     </div>
     <nav class="navbar">
         <div>
@@ -101,25 +101,83 @@
     </nav>
 
 </header>
+<?php
+$nameError = $emailError = "";
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $type = $_POST['type'];
+    $valid = true;
+
+    if(empty($name)){
+        $valid=false;
+        $nameError = "Name missing";
+    }
+
+    if(empty($email)){
+        $valid=false;
+        $emailError = "Email missing";
+    }
+
+    if(empty($phone)){
+        $valid=false;
+        $emailError = "Phone missing";
+    }
+
+    if (!isset($type)){
+        $valid=false;
+        $emailError = "Vehicle type missing";
+    }
+
+    if($valid){
+        $dbhost = '127.0.0.1:3307';
+        $dbuser = 'root';
+        $dbpass = '';
+        $db = 'test';
+
+        $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+
+        if (!$conn) {
+            die("Could not connect: <br>");
+        }
+        echo "<p>Connected Successfully</p>";
+
+        $sqlQuery = "INSERT INTO submission (name, email, phone, type) VALUES ('$name', '$email', '$phone', '$type');";
+        $result = $conn->query($sqlQuery);
+
+        if ($conn->query($sqlQuery) === TRUE) {
+            echo "<p>Submission created!</p>";
+        }
+
+        mysqli_close($conn);
+    }
+}
+
+?>
 <br>
 <div class="box">
     <p style="color: white; font-size: 30px; text-align: center">Ask for Submission</p><br>
-    <form name="userInfo" method="post" action="onSubmit.php">
+    <form name="userInfo" method="post" action="submissions.php">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" autofocus="autofocus"><br><br>
+        <input type="text" id="name" name="name" autofocus="autofocus" required><br><br>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br><br>
+        <input type="text" id="email" name="email" required><br><br>
         <label for="phone">Phone Number:</label>
-        <input type="text" id="phone" name="phone"><br><br>
+        <input type="text" id="phone" name="phone" required><br><br>
 
-        <div class="select">Select Type: <br><br></div>
-        <input type="checkbox" name="type" value="Car">
+        <div class="select">Select Type:
+            <p style="color: red">*Required</p></div>
+        <input type="checkbox" name="type" value="isChecked">
         <label for="car"> Car</label>
-        <input type="checkbox" name="type" value="Boat">
+        <input type="checkbox" name="type" value="isChecked">
         <label for="boat"> Boat</label>
-        <input type="checkbox" name="type" value="Moto">
+        <input type="checkbox" name="type" value="isChecked">
         <label for="moto"> Moto</label><br><br>
         <input type="submit" class="button" value="Send">
+
     </form>
 </div>
 
